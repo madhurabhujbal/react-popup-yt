@@ -1,3 +1,4 @@
+import Popup from './components/Popup';
 
 function App() {
   return (
@@ -6,6 +7,9 @@ function App() {
         <h1>React Popups!</h1>
         <br></br>
         <button>Open Popup</button>
+        <Popup trigger={true}>
+          <h3>My popup</h3>
+        </Popup>
       </main>
     </div>
   );
