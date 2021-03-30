@@ -2,7 +2,11 @@
 function App() {
   return (
     <div className="App">
-      React App!!!
+      <main>
+        <h1>React Popups!</h1>
+        <br></br>
+        <button>Open Popup</button>
+      </main>
     </div>
   );
 }
