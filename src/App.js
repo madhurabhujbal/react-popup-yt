@@ -7,10 +7,11 @@ function App() {
         <h1>React Popups!</h1>
         <br></br>
         <button>Open Popup</button>
-        <Popup trigger={true}>
-          <h3>My popup</h3>
-        </Popup>
       </main>
+      <Popup trigger={true}>
+        <h3>My popup</h3>
+        <p>This is my button triggered popup</p>
+      </Popup>
     </div>
   );
 }
