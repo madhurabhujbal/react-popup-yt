@@ -1,8 +1,16 @@
 import Popup from './components/Popup';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
+  const [timedPopup, setTimedPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimedPopup(true);
+    }, 3000);
+  }, []);
+
   return (
     <div className="App">
       <main>
@@ -13,6 +21,11 @@ function App() {
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h3>My popup</h3>
         <p>This is my button triggered popup</p>
+      </Popup>
+
+      <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
+        <h3>My Timed popup</h3>
+        <p>This is my time triggered popup</p>
       </Popup>
     </div>
   );
